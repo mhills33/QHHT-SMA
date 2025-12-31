@@ -1,1 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marni Hills — QHHT Practitioner | San Miguel de Allende</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-space: #0a1628;
+      --cosmic-purple: #8b5cf6;
+      --neon-pink: #ff006e;
+      --electric-blue: #00d9ff;
+      --dark-teal: #0e2a3a;
+      --light-purple: #a855f7;
+      --off-white: #f8f9fa;
+      --soft-white: #e8e9eb;
+    }
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #000000 url('images/cosmic-background.jpg') center center fixed;
+      background-size: cover;
+      color: var(--off-white);
+      font-family: "Work Sans", -apple-system, sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.7;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Animated starfield background - SIMPLE & BIGGER */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(10px 10px at 20% 30%, rgba(255, 255, 255, 0.9), transparent),
+        radial-gradient(10px 10px at 60% 70%, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(15px 15px at 50% 50%, rgba(255, 255, 255, 0.7), transparent),
+        radial-gradient(8px 8px at 80% 10%, rgba(255, 255, 255, 0.9), transparent),
+        radial-gradient(10px 10px at 90% 60%, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(8px 8px at 33% 80%, rgba(255, 255, 255, 0.7), transparent),
+        radial-gradient(10px 10px at 15% 90%, rgba(255, 255, 255, 0.9), transparent),
+        radial-gradient(8px 8px at 75% 45%, rgba(255, 255, 255, 0.6), transparent),
+        radial-gradient(15px 15px at 10% 20%, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(10px 10px at 85% 85%, rgba(255, 255, 255, 0.7), transparent),
+        radial-gradient(8px 8px at 25% 15%, rgba(255, 255, 255, 0.9), transparent),
+        radial-gradient(10px 10px at 45% 95%, rgba(255, 255, 255, 0.8), transparent);
+      background-size: 300% 300%, 250% 250%, 400% 400%, 350% 350%, 280% 280%, 320% 320%, 290% 290%, 310% 310%, 330% 330%, 270% 270%, 340% 340%, 300% 300%;
+      background-position: 0% 0%;
+      animation: stars 90s linear infinite;
+      opacity: 1;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes stars {
+      0% { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%; }
+      100% { background-position: 100% 100%, -100% 100%, 50% -50%, 100% 0%, -50% 50%, 75% -75%, -100% -100%, 50% 100%, 100% -100%, -75% 75%, 25% -25%, -50% 100%; }
+    }
+
+    /* Cosmic nebula effect */
+    body::after {
+      content: '';
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 80%, rgba(255, 0, 110, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 40% 20%, rgba(0, 217, 255, 0.08) 0%, transparent 50%);
+      animation: nebula 30s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes nebula {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      33% { transform: translate(5%, -5%) rotate(120deg); }
+      66% { transform: translate(-5%, 5%) rotate(240deg); }
+    }
+
+    /* Main container */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 40px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Hero section */
+    .hero {
+      background: rgba(10, 22, 40, 0.7);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 
+                  0 0 60px rgba(139, 92, 246, 0.2);
+      padding: 60px 50px;
+      margin-bottom: 60px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 0.8s ease-out;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--neon-pink), var(--electric-blue), var(--cosmic-purple));
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 3.2rem;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      text-align: center;
+      background: linear-gradient(135deg, var(--neon-pink), var(--light-purple), var(--electric-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 30px;
+      line-height: 1.2;
+    }
+
+    .hero-image {
+      max-width: 400px;
+      width: 100%;
+      margin: 30px auto;
+      display: block;
+      border: 2px solid rgba(139, 92, 246, 0.5);
+      box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3),
+                  0 0 40px rgba(255, 0, 110, 0.2);
+      border-radius: 8px;
+    }
+
+    .hero-text {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      text-align: center;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--soft-white);
+    }
+
+    .benefits-list {
+      max-width: 600px;
+      margin: 30px auto 0;
+      list-style: none;
+    }
+
+    .benefits-list li {
+      padding: 12px 0 12px 40px;
+      position: relative;
+      font-size: 1.05rem;
+      color: var(--off-white);
+    }
+
+    .benefits-list li::before {
+      content: '✨';
+      position: absolute;
+      left: 0;
+      font-size: 1.3rem;
+    }
+
+    /* Section styling */
+    section {
+      background: rgba(10, 22, 40, 0.6);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+      padding: 40px 45px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.8s ease-out backwards;
+      backdrop-filter: blur(10px);
+    }
+
+    section:nth-child(2) { animation-delay: 0.1s; }
+    section:nth-child(3) { animation-delay: 0.2s; }
+    section:nth-child(4) { animation-delay: 0.3s; }
+
+    section:hover {
+      box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+      transform: translateY(-3px);
+      border-color: rgba(139, 92, 246, 0.4);
+    }
+
+    h2 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      background: linear-gradient(135deg, var(--neon-pink), var(--light-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid rgba(139, 92, 246, 0.3);
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 80px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--neon-pink), var(--electric-blue));
+    }
+
+    h3 {
+      font-family: "Work Sans", sans-serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--off-white);
+      margin-bottom: 15px;
+    }
+
+    section p {
+      margin-bottom: 18px;
+      color: var(--soft-white);
+      line-height: 1.8;
+    }
+
+    section p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Booking & Payment section */
+    .booking-card {
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(255, 0, 110, 0.15) 100%);
+      border: 2px solid rgba(139, 92, 246, 0.4);
+      animation-delay: 0s;
+    }
+
+    .payment-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .payment-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 24px;
+      background: rgba(10, 22, 40, 0.8);
+      border: 2px solid var(--cosmic-purple);
+      border-radius: 8px;
+      color: var(--off-white);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .payment-btn:hover {
+      background: var(--cosmic-purple);
+      border-color: var(--neon-pink);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4),
+                  0 0 30px rgba(255, 0, 110, 0.3);
+      color: white;
+    }
+
+    /* About Me section */
+    .about-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .about-images img {
+      width: 100%;
+      height: auto;
+      border: 2px solid rgba(139, 92, 246, 0.4);
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .about-images img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+    }
+
+    /* Testimonials section */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 35px;
+    }
+
+    .testimonial-card {
+      background: rgba(10, 22, 40, 0.6);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: 8px;
+      padding: 25px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+      border-color: rgba(255, 0, 110, 0.5);
+    }
+
+    .testimonial-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid var(--cosmic-purple);
+      margin-bottom: 20px;
+      object-fit: cover;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: var(--soft-white);
+      margin-bottom: 15px;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-author {
+      color: var(--light-purple);
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    /* Links */
+    a {
+      color: var(--electric-blue);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--neon-pink);
+    }
+
+    /* Divider */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.5), transparent);
+      margin: 50px 0;
+      border: none;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 40px 25px 60px;
+      }
+
+      .hero {
+        padding: 40px 30px;
+      }
+
+      h1 {
+        font-size: 2.4rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      section {
+        padding: 30px 25px;
+      }
+
+      .payment-buttons {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Glow effects on hover */
+    .hero:hover {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 
+                  0 0 80px rgba(139, 92, 246, 0.3);
+    }
+
+    /* Placeholder for images */
+    .placeholder-img {
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(255, 0, 110, 0.2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--soft-white);
+      font-size: 0.9rem;
+      min-height: 200px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  
+  <div class="hero">
+    <h1>How QHHT Can Benefit You</h1>
+    
+    <!-- Replace with your actual image -->
+    <img src="images/marni-hero.jpg" alt="Marni Hills QHHT Practitioner" class="hero-image">
+    <!-- If you don't have image yet, use this placeholder: -->
+    <!-- <div class="hero-image placeholder-img">Your Photo Here</div> -->
+    
+    <p class="hero-text">
+      QHHT (Quantum Healing Hypnosis Technique) guides you into a deep theta state where you access 
+      your Higher Self—the part of you that sees the bigger picture. In this deeply relaxed state, 
+      you'll discover what's blocking your success, heal old patterns, and get clear answers about 
+      your life purpose, business decisions, and the path forward.
+    </p>
+    
+    <ul class="benefits-list">
+      <li>Discover what's blocking you</li>
+      <li>Break repetitive patterns</li>
+      <li>Access your inner wisdom</li>
+      <li>Heal physical + emotional pain</li>
+      <li>Clarity on life purpose</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2>Testimonials</h2>
+    
+    <div class="testimonials-grid">
+      
+      <div class="testimonial-card">
+        <!-- Replace with actual testimonial image -->
+        <img src="images/testimonial-1.jpg" alt="Dr. Cynthia Miller">
+        <!-- Or use placeholder: -->
+        <!-- <div style="width: 100px; height: 100px; margin: 0 auto 20px; border-radius: 50%; background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(255, 0, 110, 0.2)); border: 3px solid var(--cosmic-purple);"></div> -->
+        
+        <p class="testimonial-text">
+          "I was pleasantly surprised at the group QHHT process. I didn't expect to experience 
+          much, but I received some fabulous insights that have been extremely helpful."
+        </p>
+        <div class="testimonial-author">— Dr. Cynthia Miller, Author</div>
+      </div>
+      
+      <div class="testimonial-card">
+        <img src="images/testimonial-2.jpg" alt="Client testimonial">
+        <!-- Or use placeholder: -->
+        <!-- <div style="width: 100px; height: 100px; margin: 0 auto 20px; border-radius: 50%; background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(255, 0, 110, 0.2)); border: 3px solid var(--cosmic-purple);"></div> -->
+        
+        <p class="testimonial-text">
+          "Through her hypnosis session, I learned a lot more about my personal situation and 
+          had some remarkable insights. It was truly valuable, and I felt comfortable, safe and 
+          taken care of the whole time."
+        </p>
+        <div class="testimonial-author">— Antonia, San Miguel</div>
+      </div>
+      
+      <div class="testimonial-card">
+        <img src="images/testimonial-3.jpg" alt="Client testimonial">
+        <!-- Or use placeholder: -->
+        <!-- <div style="width: 100px; height: 100px; margin: 0 auto 20px; border-radius: 50%; background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(255, 0, 110, 0.2)); border: 3px solid var(--cosmic-purple);"></div> -->
+        
+        <p class="testimonial-text">
+          "I highly recommend Marni for anyone looking for insight, guidance and wisdom in their life. 
+          The session gave me clarity I've been searching for."
+        </p>
+        <div class="testimonial-author">— Workshop Participant</div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="booking-card">
+    <h2>Book Your QHHT Session</h2>
+    <p>
+      Ready to access your own inner wisdom? Private QHHT sessions are 5-6 hours and include 
+      your complete life story, past life regression, and personalized guidance from your Higher Self. 
+      You'll receive a recording of your session to revisit again and again.
+    </p>
+    <p style="margin-top: 20px; margin-bottom: 30px;">
+      <strong>Session Cost:</strong> $350 (or $275 with code WISEWOMEN — valid through Feb 10, 2026)<br>
+      <strong>Have questions?</strong> <a href="mailto:marniqhht@gmail.com">marniqhht@gmail.com</a> | 
+      <a href="https://wa.me/18186536199">WhatsApp: +1 818 653 6199</a>
+    </p>
+    
+    <div style="border-top: 1px solid rgba(139, 92, 246, 0.3); padding-top: 30px; margin-bottom: 30px;">
+      <h3 style="color: var(--neon-pink); font-size: 1.4rem; margin-bottom: 15px; font-weight: 500;">Option 1: Reserve Your Spot with $100 Deposit</h3>
+      <p style="margin-bottom: 20px;">
+        Secure your session date with a <strong>fully refundable $100 deposit</strong>. 
+        Pay the remaining balance ($250 or $175 with code) on the day of your session. 
+        Deposit is refunded in full if you cancel with 48+ hours notice.
+      </p>
+      
+      <div class="payment-buttons" style="margin-bottom: 20px;">
+        <a href="https://venmo.com/u/marni-hills" class="payment-btn" target="_blank">💳 Venmo - $100</a>
+        <a href="https://paypal.me/marnihills/100" class="payment-btn" target="_blank">💳 PayPal - $100</a>
+        <a href="#" class="payment-btn" target="_blank">💳 Wise - $100</a>
+        <a href="mailto:marniqhht@gmail.com?subject=Zelle $100 Deposit" class="payment-btn">💳 Zelle - $100</a>
+      </div>
+      
+      <div style="text-align: center;">
+        <a href="https://calendly.com/your-link-here" class="payment-btn" style="display: inline-block; background: linear-gradient(135deg, var(--neon-pink), var(--cosmic-purple)); border: none; max-width: 300px; width: 100%;" target="_blank">
+          📅 Book Your Session Date
+        </a>
+      </div>
+    </div>
+    
+    <div style="border-top: 1px solid rgba(139, 92, 246, 0.3); padding-top: 30px; margin-bottom: 30px;">
+      <h3 style="color: var(--electric-blue); font-size: 1.4rem; margin-bottom: 15px; font-weight: 500;">Option 2: Pay in Full & Book</h3>
+      <p style="margin-bottom: 20px;">
+        Pay for your complete session now: <strong>$350</strong> (or <strong>$275</strong> with code WISEWOMEN). 
+        Lock in your date and arrive ready for your transformational experience.
+      </p>
+      
+      <div class="payment-buttons" style="margin-bottom: 20px;">
+        <a href="https://venmo.com/u/marni-hills" class="payment-btn" target="_blank">💳 Venmo - Full Payment</a>
+        <a href="https://paypal.me/marnihills/350" class="payment-btn" target="_blank">💳 PayPal - Full Payment</a>
+        <a href="#" class="payment-btn" target="_blank">💳 Wise - Full Payment</a>
+        <a href="mailto:marniqhht@gmail.com?subject=Zelle Full Payment" class="payment-btn">💳 Zelle - Full Payment</a>
+      </div>
+      
+      <div style="text-align: center;">
+        <a href="https://calendly.com/your-link-here" class="payment-btn" style="display: inline-block; background: linear-gradient(135deg, var(--electric-blue), var(--light-purple)); border: none; max-width: 300px; width: 100%;" target="_blank">
+          📅 Book Your Session Date
+        </a>
+      </div>
+    </div>
+    
+    <div style="border-top: 1px solid rgba(139, 92, 246, 0.3); padding-top: 30px;">
+      <h3 style="color: var(--light-purple); font-size: 1.4rem; margin-bottom: 15px; font-weight: 500;">🎁 Gift Certificates</h3>
+      <p style="margin-bottom: 20px;">
+        Give the gift of transformation! Gift certificates available in any amount: 
+        <strong>$100</strong> (recipient pays balance), <strong>$200</strong> (recipient pays $150 or $75 with code), 
+        or <strong>$275/$350</strong> (covers full session).
+      </p>
+      
+      <div class="payment-buttons">
+        <a href="https://venmo.com/u/marni-hills" class="payment-btn" target="_blank">💳 Venmo - Gift Cert</a>
+        <a href="https://paypal.me/marnihills" class="payment-btn" target="_blank">💳 PayPal - Gift Cert</a>
+        <a href="#" class="payment-btn" target="_blank">💳 Wise - Gift Cert</a>
+        <a href="mailto:marniqhht@gmail.com?subject=Zelle Gift Certificate" class="payment-btn">💳 Zelle - Gift Cert</a>
+      </div>
+      
+      <p style="text-align: center; margin-top: 20px; font-size: 0.95rem; color: var(--soft-white);">
+        After payment, email <a href="mailto:marniqhht@gmail.com">marniqhht@gmail.com</a> with: 
+        recipient name, gift amount, and your message. Certificate delivered within 24 hours.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>About Me</h2>
+    
+    <div class="about-images">
+      <!-- Replace with your actual images -->
+      <img src="images/marni-1.jpg" alt="Marni Hills">
+      <img src="images/marni-2.jpg" alt="Marni Hills at work">
+      <img src="images/marni-3.jpg" alt="Marni Hills in San Miguel">
+      <!-- If you don't have images yet, use placeholders: -->
+      <!-- <div class="placeholder-img">Photo 1</div>
+      <div class="placeholder-img">Photo 2</div>
+      <div class="placeholder-img">Photo 3</div> -->
+    </div>
+    
+    <p>
+      I'm a skeptical, well-traveled writer who spent years researching ancient civilizations, 
+      chasing UFO theories, and documenting wildlife across Southeast Asia, India, and Japan. 
+      I've founded an international animal rescue organization, fostered 22 dogs, and groomed 
+      over 1,000 dogs annually. I'm a fearless explorer who's never been afraid to completely 
+      change direction when something calls to me.
+    </p>
+    
+    <p>
+      My own QHHT session in June 2024 showed me something I couldn't ignore: I was meant to 
+      help people the same way I'd been helping animals all along. Deep listening, energetic 
+      sensitivity, holding space for transformation. The same skills, just a different species.
+    </p>
+    
+    <p>
+      I'm trained in QHHT Level 2 (Dolores Cannon method), Vedic Astrology (The Astro School, 
+      Rishikesh, India), and Human Design. I'm obsessed with megalithic structures, true crime, 
+      Bob Marley, and the unexplained. Based in San Miguel de Allende, Mexico—I help skeptics 
+      like I was access the wisdom they didn't know they had.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section style="text-align: center; background: rgba(139, 92, 246, 0.1);">
+    <h2>Ready to Begin?</h2>
+    <p style="font-size: 1.1rem; margin-bottom: 25px;">
+      Your subconscious knows exactly what's blocking you—and how to fix it.
+    </p>
+    <p>
+      📧 <a href="mailto:marniqhht@gmail.com">marniqhht@gmail.com</a><br>
+      📱 <a href="https://wa.me/18186536199">WhatsApp: +1 818 653 6199</a><br>
+      📸 <a href="https://instagram.com/qhhtsma" target="_blank">Instagram: @QHHTSMA</a><br>
+      🎥 <a href="https://youtube.com/@QHHTSMA" target="_blank">YouTube: @QHHTSMA</a>
+    </p>
+    <p style="margin-top: 25px; font-size: 0.95rem; color: var(--soft-white);">
+      San Miguel de Allende, Mexico | Level 2 Certified QHHT Practitioner
+    </p>
+  </section>
+
+</div>
+
+</body>
+</html>
