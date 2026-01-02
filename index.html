@@ -30,13 +30,13 @@
     }
 
     body {
-      background: #000000 url('images/cosmic-background.jpg') center center fixed;
-      background-size: cover;
-      color: var(--off-white);
-      font-family: "Work Sans", -apple-system, sans-serif;
-      font-weight: 300;
-      font-size: 17px;
-      line-height: 1.7;
+     background: #000000 url('images/cosmic-background.jpg') center center fixed;
+  background-size: cover;
+  color: var(--off-white);
+  font-family: "Work Sans", -apple-system, sans-serif;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 1.8;
       overflow-x: hidden;
       position: relative;
     }
@@ -168,12 +168,12 @@
     }
 
     .hero-text {
-      max-width: 650px;
-      margin: 0 auto 30px;
-      text-align: center;
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: var(--soft-white);
+     max-width: 650px;
+  margin: 0 auto 30px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #ffffff;
     }
 
     .benefits-list {
@@ -183,10 +183,10 @@
     }
 
     .benefits-list li {
-      padding: 12px 0 12px 40px;
-      position: relative;
-      font-size: 1.05rem;
-      color: var(--off-white);
+     padding: 12px 0 12px 40px;
+  position: relative;
+  font-size: 1.15rem;
+  color: #ffffff;
     }
 
     .benefits-list li::before {
@@ -252,9 +252,10 @@
     }
 
     section p {
-      margin-bottom: 18px;
-      color: var(--soft-white);
-      line-height: 1.8;
+       margin-bottom: 18px;
+  color: #ffffff;
+  line-height: 1.9;
+  font-size: 1.05rem;
     }
 
     section p:last-child {
@@ -303,9 +304,9 @@
     /* About Me section */
     .about-images {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin: 30px 0;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
     }
 
     .about-images img {
@@ -388,35 +389,53 @@
     }
 
     /* Responsive design */
-    @media (max-width: 768px) {
-      .container {
-        padding: 40px 25px 60px;
-      }
+ @media (max-width: 768px) {
+  .container {
+    padding: 40px 25px 60px;
+  }
 
-      .hero {
-        padding: 40px 30px;
-      }
+  .hero {
+    padding: 40px 30px;
+  }
 
-      h1 {
-        font-size: 2.4rem;
-      }
+  h1 {
+    font-size: 2.4rem;
+  }
 
-      h2 {
-        font-size: 1.8rem;
-      }
+  h2 {
+    font-size: 1.8rem;
+  }
 
-      section {
-        padding: 30px 25px;
-      }
+  section {
+    padding: 30px 25px;
+  }
 
-      .payment-buttons {
-        grid-template-columns: 1fr;
-      }
+  .payment-buttons {
+    grid-template-columns: 1fr;
+  }
 
-      .testimonials-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* ADD THESE NEW LINES: */
+  body {
+    font-size: 20px;
+  }
+  
+  section p {
+    font-size: 1.15rem;
+    color: #ffffff;
+  }
+  
+  .about-images {
+    grid-template-columns: 1fr;
+  }
+  
+  .benefits-list li {
+    font-size: 1.2rem;
+  }
+}
 
     /* Glow effects on hover */
     .hero:hover {
@@ -519,7 +538,7 @@
   </p>
   <p style="margin-top: 20px; margin-bottom: 40px;">
     <strong>Session Cost:</strong> $350 (or $275 with code WISEWOMEN — valid through Feb 10, 2026)<br>
-    <strong>Have questions?</strong> <a href="mailto:mhills33@gmail.com">mhills33@gmail.com</a> | 
+    <strong>Have questions?</strong> <a href="mailto:marniqhht@gmail.com">marniqhht@gmail.com</a> | 
     <a href="https://wa.me/18186536199">WhatsApp: +1 818 653 6199</a>
   </p>
   
@@ -534,7 +553,7 @@
         📅 Book via Calendly
       </a>
       <p style="margin-top: 15px; font-size: 0.95rem;">
-        Or email me directly at <a href="mailto:mhills33@gmail.com">mhills33@gmail.com</a> to schedule
+        Or email me directly at <a href="mailto:marniqhht@gmail.com">marniqhht@gmail.com</a> to schedule
       </p>
     </div>
   </details>
@@ -550,7 +569,7 @@
       <div style="margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px solid rgba(139, 92, 246, 0.3);">
         <h3 style="color: var(--neon-pink); font-size: 1.2rem; margin-bottom: 15px;">Option 1: $100 Refundable Deposit</h3>
         <p style="margin-bottom: 15px; font-size: 0.95rem;">
-          Secure your session date. Pay remaining balance ($250 or $175 with code) on session day. 
+          Secure your session date. Pay remaining balance on session day. 
           Fully refunded if you cancel with 48+ hours notice.
         </p>
         <div class="payment-buttons">
@@ -568,7 +587,7 @@
       <div style="margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px solid rgba(139, 92, 246, 0.3);">
         <h3 style="color: var(--electric-blue); font-size: 1.2rem; margin-bottom: 15px;">Option 2: Pay in Full</h3>
         <p style="margin-bottom: 15px; font-size: 0.95rem;">
-          Pay complete session cost now: $350 (or $275 with code WISEWOMEN). 
+          Pay complete session cost now: $350. 
           Lock in your date and arrive ready for transformation.
         </p>
         <div class="payment-buttons">
@@ -578,7 +597,7 @@
           <a href="mailto:mhills33@gmail.com?subject=Zelle Full Payment" class="payment-btn">💳 Zelle</a>
         </div>
         <p style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: var(--soft-white);">
-          Amount: <strong>$350 or $275</strong> | Zelle: mhills33@gmail.com
+          Amount: <strong>$350 </strong> | Zelle: mhills33@gmail.com
         </p>
       </div>
       
@@ -586,8 +605,7 @@
       <div>
         <h3 style="color: var(--light-purple); font-size: 1.2rem; margin-bottom: 15px;">🎁 Gift Certificates</h3>
         <p style="margin-bottom: 15px; font-size: 0.95rem;">
-          Available in any amount: $100 (recipient pays balance), $200 (recipient pays $150/$75), 
-          or $275/$350 (full session).
+          Available in any amount!
         </p>
         <div class="payment-buttons">
           <a href="https://venmo.com/u/Marni-Hills" class="payment-btn" target="_blank">💳 Venmo</a>
@@ -596,8 +614,8 @@
           <a href="mailto:mhills33@gmail.com?subject=Zelle Gift Certificate" class="payment-btn">💳 Zelle</a>
         </div>
         <p style="text-align: center; margin-top: 15px; font-size: 0.9rem; color: var(--soft-white);">
-          After payment, email <a href="mailto:mhills33@gmail.com">mhills33@gmail.com</a> with recipient name, 
-          gift amount, and your message. Certificate delivered within 24 hours.
+          After payment, email <a href="mailto:marniqhht@gmail.com">marniqhht@gmail.com</a> with recipient name, 
+          gift amount, and any message. Certificate emailed to you for gifting within 24 hours.
         </p>
       </div>
       
