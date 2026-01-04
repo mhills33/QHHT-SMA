@@ -460,10 +460,56 @@
       border-color: var(--neon-pink);
     }
   </style>
+  /* Navigation buttons */
+    .nav-btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: rgba(10, 22, 40, 0.8);
+      border: 2px solid var(--cosmic-purple);
+      border-radius: 8px;
+      color: var(--off-white);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-btn:hover {
+      background: var(--cosmic-purple);
+      border-color: var(--neon-pink);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+      color: white;
+    }
+
+    /* Mobile navigation */
+    @media (max-width: 768px) {
+      nav > div {
+        gap: 10px;
+      }
+      
+      .nav-btn {
+        font-size: 0.85rem;
+        padding: 10px 15px;
+      }
+    }
   </style>
 </head>
 <body>
+<body>
 
+<!-- Navigation Menu -->
+<nav style="position: sticky; top: 0; z-index: 1000; background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(10px); border-bottom: 2px solid rgba(139, 92, 246, 0.4); padding: 15px 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);">
+  <div style="max-width: 900px; margin: 0 auto; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+    <a href="#booking" class="nav-btn">📅 Booking</a>
+    <a href="#payment" class="nav-btn">💳 Payment</a>
+    <a href="#about" class="nav-btn">👤 About Marni</a>
+    <a href="#blog" class="nav-btn">📝 Blog</a>
+  </div>
+</nav>
+
+<div class="container">
 <div class="container">
   
   <div class="hero">
@@ -535,7 +581,7 @@
     </div>
   </section>
 
- <section class="booking-card">
+<section class="booking-card" id="booking">
   <h2>Book Your QHHT Session</h2>
   <p>
     Ready to access your own inner wisdom? Private QHHT sessions are 5-6 hours and include 
@@ -578,7 +624,7 @@
 </details>
 
   <!-- MAIN BUTTON 2: PAYMENT OPTIONS -->
-  <details style="border: 2px solid var(--electric-blue); border-radius: 8px; padding: 20px; background: rgba(0, 217, 255, 0.1);">
+ <details id="payment" style="border: 2px solid var(--electric-blue); border-radius: 8px; padding: 20px; background: rgba(0, 217, 255, 0.1);">
     <summary style="font-size: 1.3rem; font-weight: 600; cursor: pointer; color: var(--electric-blue); list-style: none; text-align: center; padding: 10px;">
       💳 Payment Options
     </summary>
@@ -641,8 +687,8 @@
     </div>
   </details>
 </section>
-  <section>
-    <h2>About Me</h2>
+<section id="about">
+  <h2>About Me</h2>
     
    <div class="about-images">
     <img src="images/marni-1.jpg" alt="Marni Hills 1">
@@ -670,7 +716,7 @@
   </div>
 </section>
   <div class="divider"></div>
-<section>
+<section id="blog">
   <h2>Metaphysical Mashup</h2>
   <p style="text-align: center; font-size: 1.05rem; margin-bottom: 35px; color: #ffffff;">
     A blog introducing spiritual concepts, thought leaders in the field, and my personal experiences with different modalities.<section>
