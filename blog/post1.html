@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Blog Post Title - Metaphysical Mashup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cosmic-purple: #8b5cf6;
+      --neon-pink: #ff006e;
+      --electric-blue: #00d9ff;
+      --light-purple: #a855f7;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000000 url('../images/cosmic-background.jpg') center center fixed;
+      background-size: cover;
+      color: #ffffff;
+      font-family: "Work Sans", -apple-system, sans-serif;
+      font-weight: 300;
+      font-size: 19px;
+      line-height: 1.8;
+      padding: 40px 20px;
+    }
+
+    .blog-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(10, 22, 40, 0.85);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: 12px;
+      padding: 50px 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-bottom: 30px;
+      padding: 10px 20px;
+      background: rgba(139, 92, 246, 0.3);
+      border: 2px solid var(--cosmic-purple);
+      border-radius: 8px;
+      color: var(--electric-blue);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background: var(--cosmic-purple);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .blog-header {
+      border-bottom: 2px solid rgba(139, 92, 246, 0.3);
+      padding-bottom: 25px;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      background: linear-gradient(135deg, var(--neon-pink), var(--light-purple), var(--electric-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .blog-meta {
+      color: var(--light-purple);
+      font-size: 0.95rem;
+      font-style: italic;
+    }
+
+    .blog-content {
+      color: #ffffff;
+    }
+
+    .blog-content p {
+      margin-bottom: 25px;
+      line-height: 1.9;
+    }
+
+    .blog-content h2 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 2rem;
+      color: var(--neon-pink);
+      margin: 40px 0 20px;
+    }
+
+    .blog-content h3 {
+      font-size: 1.5rem;
+      color: var(--electric-blue);
+      margin: 30px 0 15px;
+    }
+
+    .blog-content strong {
+      color: var(--light-purple);
+      font-weight: 500;
+    }
+
+    .blog-content em {
+      color: var(--electric-blue);
+    }
+
+    .blog-content blockquote {
+      border-left: 4px solid var(--neon-pink);
+      padding-left: 25px;
+      margin: 30px 0;
+      font-style: italic;
+      color: #e8e9eb;
+    }
+
+    .blog-footer {
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 2px solid rgba(139, 92, 246, 0.3);
+      text-align: center;
+    }
+
+    .blog-footer a {
+      color: var(--electric-blue);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .blog-footer a:hover {
+      color: var(--neon-pink);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 18px;
+        padding: 20px 15px;
+      }
+
+      .blog-container {
+        padding: 30px 25px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .blog-content h2 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="blog-container">
+  
+  <a href="../index.html" class="back-button">← Back to Main Site</a>
+  
+  <div class="blog-header">
+    <h1>Your Blog Post Title Goes Here</h1>
+    <div class="blog-meta">Posted on January 1, 2026 | Metaphysical Mashup</div>
+  </div>
+  
+  <div class="blog-content">
+    
+    <p>
+      Your opening paragraph goes here. Hook your readers with something interesting, 
+      personal, or thought-provoking. This is where you set the tone for the entire post.
+    </p>
+    
+    <h2>A Section Heading</h2>
+    
+    <p>
+      Your content continues here. You can write as much or as little as you want. 
+      Break your post into sections with headings to make it easier to read.
+    </p>
+    
+    <p>
+      Add more paragraphs as needed. Keep them relatively short (3-5 sentences) for 
+      better readability, especially on mobile devices.
+    </p>
+    
+    <h3>A Subsection If You Need It</h3>
+    
+    <p>
+      You can use <strong>bold text</strong> to emphasize important points, and 
+      <em>italics</em> for softer emphasis or when referencing specific terms.
+    </p>
+    
+    <blockquote>
+      "You can also include quotes like this. They'll appear with a pink left border 
+      and italicized text to make them stand out."
+    </blockquote>
+    
+    <p>
+      Continue with more content. Tell your story, share your experience, explain the 
+      concept—whatever fits your post topic.
+    </p>
+    
+    <h2>Another Main Section</h2>
+    
+    <p>
+      Keep adding sections and paragraphs until your post is complete. There's no limit 
+      to how long your posts can be.
+    </p>
+    
+    <p>
+      Your closing thoughts go here. Maybe end with a question for readers to think about, 
+      or a call to action like "What's your experience with this?"
+    </p>
+    
+  </div>
+  
+  <div class="blog-footer">
+    <p>
+      Want to explore your own Higher Self?<br>
+      <a href="../index.html#booking">Book a QHHT Session</a>
+    </p>
+    <p style="margin-top: 20px;">
+      <a href="mailto:marniqhht@gmail.com">Contact me</a> | 
+      <a href="https://instagram.com/qhhtsma" target="_blank">Instagram</a> | 
+      <a href="https://youtube.com/@QHHTSMA" target="_blank">YouTube</a>
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
