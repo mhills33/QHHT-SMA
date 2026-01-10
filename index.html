@@ -764,6 +764,26 @@
   
   <div style="max-width: 800px; margin: 0 auto;">
     
+    <!-- Top Grid - Animal Photos -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px;">
+      
+      <div class="image-card">
+        <img src="images/marni-4.jpg" alt="Marni Hills 4" onclick="openLightbox(this)" style="width: 100%; height: 250px; object-fit: cover; border: 2px solid rgba(139, 92, 246, 0.4); border-radius: 8px; cursor: pointer;">
+        <p class="image-caption">During my Certified Pet Aesthetician Training</p>
+      </div>
+      
+      <div class="image-card">
+        <img src="images/marni-5.jpg" alt="Marni Hills 5" onclick="openLightbox(this)" style="width: 100%; height: 250px; object-fit: cover; border: 2px solid rgba(139, 92, 246, 0.4); border-radius: 8px; cursor: pointer;">
+        <p class="image-caption">Street Greetings in Varanasi India</p>
+      </div>
+      
+      <div class="image-card">
+        <img src="images/marni-6.jpg" alt="Marni Hills 6" onclick="openLightbox(this)" style="width: 100%; height: 250px; object-fit: cover; border: 2px solid rgba(139, 92, 246, 0.4); border-radius: 8px; cursor: pointer;">
+        <p class="image-caption">Taking in Callejeritos ("Street Dogs") outside Guanajuato City, MX</p>
+      </div>
+      
+    </div>
+    
     <!-- Image 1 - Float Right -->
     <div class="image-card" style="float: right; width: 300px; margin: 0 0 20px 30px;">
       <img src="images/marni-1.jpg" alt="Marni Hills 1" onclick="openLightbox(this)" style="width: 100%; height: 300px; object-fit: cover; border: 2px solid rgba(139, 92, 246, 0.4); border-radius: 8px; cursor: pointer;">
@@ -802,28 +822,19 @@
       My sessions continue to surprise and delight both me and my clients. This consciousness-altering process—using Dolores Cannon's tools & method—can lead to profound life changes and insights.
     </p>
     
-    <!-- Clear floats before additional images -->
-    <div style="clear: both; margin: 40px 0;"></div>
+    <!-- Clear floats -->
+    <div style="clear: both;"></div>
     
-    <!-- Remaining Images in Grid -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
+  </div>
+  
+  <!-- Lightbox Modal -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+  
+</section>
       
-      <div class="image-card">
-        <img src="images/marni-4.jpg" alt="Marni Hills 4" onclick="openLightbox(this)" style="width: 100%; height: 250px; object-fit: cover; border: 2px solid rgba(139, 92, 246, 0.4); border-radius: 8px; cursor: pointer;">
-        <p class="image-caption">During my Certified Pet Aesthetician Training</p>
-      </div>
-      
-      <div class="image-card">
-        <img src="images/marni-5.jpg" alt="Marni Hills 5" onclick="openLightbox(this)" style="width: 100%; height: 250px; object-fit: cover; border: 2px solid rgba(139, 92, 246, 0.4); border-radius: 8px; cursor: pointer;">
-        <p class="image-caption">Street Greetings in Varanasi India</p>
-      </div>
-      
-      <div class="image-card">
-        <img src="images/marni-6.jpg" alt="Marni Hills 6" onclick="openLightbox(this)" style="width: 100%; height: 250px; object-fit: cover; border: 2px solid rgba(139, 92, 246, 0.4); border-radius: 8px; cursor: pointer;">
-        <p class="image-caption">Taking in Callejeritos ("Street Dogs") outside Guanajuato City, MX</p>
-      </div>
-      
-    </div>
     
   </div>
   
