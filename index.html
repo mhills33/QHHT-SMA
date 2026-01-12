@@ -586,9 +586,29 @@
         padding: 10px 15px;
       }
     }
-  </style>
+   /* Mobile navigation */
+    @media (max-width: 768px) {
+      nav > div {
+        gap: 10px;
+      }
+      
+      .nav-btn {
+        font-size: 0.85rem;
+        padding: 10px 15px;
+      }
+    }
+    
+    /* ADD THIS NEW CODE HERE - Fix for sticky nav */
+    section[id] {
+      scroll-margin-top: 100px;
+    }
+
+    div[id] {
+      scroll-margin-top: 100px;
+    }
+  </style>   ← Keep this closing tag
 </head>
-  <body>
+<body>
 
 <!-- Navigation Menu -->
 <nav style="position: sticky; top: 0; z-index: 1000; background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(10px); border-bottom: 2px solid rgba(139, 92, 246, 0.4); padding: 15px 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);">
