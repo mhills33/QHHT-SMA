@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment | QHHT SMA</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1920&q=80")
+        no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    /* Dark overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: -1;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 18px;
+      flex-wrap: wrap;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-btn {
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(90deg, #ff2bbd, #7d4bff);
+      box-shadow: 0 0 12px rgba(255, 0, 200, 0.35);
+      transition: transform 0.15s ease;
+      font-size: 14px;
+    }
+
+    .nav-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 60px auto;
+      padding: 35px 28px;
+      background: rgba(15, 20, 45, 0.75);
+      border-radius: 18px;
+      box-shadow: 0 0 35px rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #ff2bbd, #7d4bff, #00c8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .highlight {
+      font-size: 22px;
+      font-weight: bold;
+      color: #ff9df0;
+      margin: 25px 0;
+    }
+
+    .text {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .pay-options {
+      margin-top: 20px;
+      text-align: left;
+      display: inline-block;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .pay-options p {
+      font-size: 18px;
+      margin: 12px 0;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    .pay-options a {
+      color: #7dcbff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .pay-options a:hover {
+      text-decoration: underline;
+    }
+
+    .important {
+      margin-top: 35px;
+      font-size: 18px;
+      padding: 18px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .footer-note {
+      margin-top: 30px;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 25px 14px;
+        padding: 25px 18px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .highlight {
+        font-size: 20px;
+      }
+
+      .text, .pay-options p, .important {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Nav (same vibe as your site buttons) -->
+  <div class="navbar">
+    <a class="nav-btn" href="index.html">Home</a>
+    <a class="nav-btn" href="index.html#booking">Booking</a>
+    <a class="nav-btn" href="payment.html">Payment</a>
+    <a class="nav-btn" href="index.html#community">Community Rate</a>
+    <a class="nav-btn" href="index.html#about">About Marni</a>
+    <a class="nav-btn" href="index.html#blog">Blog</a>
+  </div>
+
+  <div class="container">
+    <h1>Payment Information</h1>
+
+    <div class="highlight">
+      $100 REFUNDABLE DEPOSIT REQUIRED for all sessions.
+    </div>
+
+    <div class="text">
+      Balance due on day of session or before.
+    </div>
+
+    <div class="pay-options">
+      <p><strong>Pay with Zelle:</strong> mhills33@gmail.com</p>
+      <p><strong>Pay with WISE:</strong> <a href="https://wise.com/pay/me/marenstewarth" target="_blank">https://wise.com/pay/me/marenstewarth</a></p>
+      <p><strong>Pay with Venmo:</strong> <a href="https://venmo.com/u/Marni-Hills" target="_blank">https://venmo.com/u/Marni-Hills</a></p>
+      <p><strong>Pay with PayPal:</strong> <a href="https://paypal.me/mhills333/100" target="_blank">https://paypal.me/mhills333/100</a></p>
+    </div>
+
+    <div class="important">
+      <strong>Your booking is NOT confirmed</strong> until I receive your $100 deposit within 24 hours.
+      <br><br>
+      Deposit is fully refunded if you cancel 48+ hours in advance.
+    </div>
+
+    <div class="footer-note">
+      Congratulations on taking this big step in your exploration of consciousness!
+    </div>
+
+  </div>
+
+</body>
+</html>
