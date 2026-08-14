@@ -38,8 +38,8 @@ function displayTime(iso) {
 }
 
 (async () => {
-  const me = await api('/users/me');
-  const userUri = me.uri;
+ const me = await api('/users/me');
+const userUri = me.resource.uri;
 
   const eventTypes = await api(`/event_types?user=${encodeURIComponent(userUri)}`);
 
