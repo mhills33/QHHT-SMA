@@ -135,8 +135,7 @@ function formatTime(iso) {
   /*
    * Calendly currently allows up to 31 days for this endpoint.
    */
-  const start = new Date();
-  start.setSeconds(0, 0);
+ const start = new Date(Date.now() + 5 * 60 * 1000);
 
   const end = new Date(start);
   end.setUTCDate(end.getUTCDate() + 31);
