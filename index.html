@@ -81,7 +81,103 @@
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     }
 
+    /* Stage 1 availability row: headline on the left, compact appointment box on the right */
+    .hero-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 245px;
+      gap: 28px;
+      align-items: start;
+      margin-bottom: 30px;
+    }
+
+    .hero-top h1 {
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      max-width: none;
+    }
+
+    .availability-card {
+      width: 245px;
+      background: linear-gradient(145deg, rgba(8, 17, 33, 0.96), rgba(31, 13, 53, 0.94));
+      border: 1px solid rgba(0, 217, 255, 0.45);
+      border-radius: 10px;
+      padding: 16px 18px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45), 0 0 24px rgba(0, 217, 255, 0.12);
+    }
+
+    .availability-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: var(--electric-blue);
+      text-align: center;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+    }
+
+    .availability-subtitle {
+      text-align: center;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--soft-white);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .availability-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .availability-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      padding: 5px 0;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.18);
+      color: #ffffff;
+      font-size: 0.82rem;
+      line-height: 1.25;
+    }
+
+    .availability-list li:last-child {
+      border-bottom: none;
+    }
+
+    .availability-date {
+      font-weight: 600;
+      white-space: nowrap;
+      color: #ffffff;
+    }
+
+    .availability-time {
+      color: var(--soft-white);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .availability-link {
+      display: block;
+      margin-top: 10px;
+      padding-top: 9px;
+      border-top: 1px solid rgba(0, 217, 255, 0.2);
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--electric-blue);
+    }
+
+    .availability-link:hover {
+      color: var(--neon-pink);
+    }
+
     /* Lightbox modal for full-screen images */
+
     #lightbox {
       display: none;
       position: fixed;
@@ -262,7 +358,8 @@
       font-size: 3.2rem;
       font-weight: 300;
       letter-spacing: -0.02em;
-      text-align: center;
+      text-align: left;
+      max-width: calc(100% - 285px);
       background: linear-gradient(135deg, var(--neon-pink), var(--light-purple), var(--electric-blue));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -481,6 +578,20 @@
       border: none;
     }
 
+
+
+    @media (max-width: 900px) {
+      .hero-top {
+        grid-template-columns: 1fr;
+      }
+
+      .availability-card {
+        width: 100%;
+        max-width: 245px;
+        justify-self: end;
+      }
+    }
+
     @media (max-width: 768px) {
       .container {
         padding: 40px 25px 60px;
@@ -490,8 +601,27 @@
         padding: 40px 30px;
       }
 
+      .hero-top {
+        min-height: 0;
+        margin-bottom: 30px;
+      }
+
+      .hero-top h1 {
+        padding-right: 0;
+        text-align: center;
+      }
+
+      .availability-card {
+        position: static;
+        width: 245px;
+        max-width: 100%;
+        margin: 22px auto 0;
+      }
+
       h1 {
         font-size: 2.4rem;
+        max-width: 100%;
+        text-align: center;
       }
 
       h2 {
@@ -592,7 +722,27 @@
 <div class="container">
    
   <div class="hero">
-    <h1>Feeling Stuck? Looking for Answers? Curious About Your Life's Purpose? Explore Your Own Consciousness with QHHT.</h1>
+    <div class="hero-top">
+      <h1>Feeling Stuck? Looking for Answers? Curious About Your Life's Purpose? Explore Your Own Consciousness with QHHT.</h1>
+
+      <!-- Stage 1: small availability widget with placeholder times -->
+      <div class="availability-card">
+        <div class="availability-label">Next Available</div>
+        <div class="availability-subtitle">Journey for your consciousness</div>
+
+        <ul class="availability-list">
+          <li><span class="availability-date">AUG 18</span><span class="availability-time">10:00 AM</span></li>
+          <li><span class="availability-date">AUG 19</span><span class="availability-time">2:00 PM</span></li>
+          <li><span class="availability-date">AUG 21</span><span class="availability-time">11:00 AM</span></li>
+          <li><span class="availability-date">AUG 24</span><span class="availability-time">10:00 AM</span></li>
+          <li><span class="availability-date">AUG 25</span><span class="availability-time">3:00 PM</span></li>
+        </ul>
+
+        <a href="https://calendly.com/marniqhht/qhht-session-with-marni" class="availability-link" target="_blank" rel="noopener">
+          SEE ALL APPOINTMENTS →
+        </a>
+      </div>
+    </div>
     
     <img src="images/marni-hero.png" alt="Marni Hills QHHT Practitioner" class="hero-image">
     
@@ -672,9 +822,7 @@
     </div>
   </section>
 
-  
-
-<section class="booking-card" id="booking">
+  <section class="booking-card" id="booking">
   <h2>Book Your QHHT Session</h2>
 
   <p>
