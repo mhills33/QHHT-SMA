@@ -730,12 +730,8 @@
         <div class="availability-label">Next Available</div>
         <div class="availability-subtitle">Journey for your consciousness</div>
 
-        <ul class="availability-list">
-          <li><span class="availability-date">AUG 18</span><span class="availability-time">10:00 AM</span></li>
-          <li><span class="availability-date">AUG 19</span><span class="availability-time">2:00 PM</span></li>
-          <li><span class="availability-date">AUG 21</span><span class="availability-time">11:00 AM</span></li>
-          <li><span class="availability-date">AUG 24</span><span class="availability-time">10:00 AM</span></li>
-          <li><span class="availability-date">AUG 25</span><span class="availability-time">3:00 PM</span></li>
+        <ul class="availability-list" id="availability-list">
+          <li><span class="availability-date">Loading...</span><span class="availability-time"></span></li>
         </ul>
 
         <a href="https://calendly.com/marniqhht/qhht-session-with-marni" class="availability-link" target="_blank" rel="noopener">
@@ -1088,6 +1084,55 @@ document.addEventListener('keydown', function(e) {
     closeLightbox();
   }
 });
+
+// Load the five current appointment openings generated from Calendly.
+async function loadAvailability() {
+  const list = document.getElementById('availability-list');
+  if (!list) return;
+
+  try {
+    const response = await fetch('availability.json?t=' + Date.now(), {
+      cache: 'no-store'
+    });
+
+    if (!response.ok) {
+      throw new Error('Availability file could not be loaded.');
+    }
+
+    const data = await response.json();
+    const appointments = Array.isArray(data.appointments) ? data.appointments : [];
+
+    if (appointments.length === 0) {
+      list.innerHTML = '<li><span class=\"availability-date\">No openings</span><span class=\"availability-time\">See Calendly</span></li>';
+      return;
+    }
+
+    list.innerHTML = appointments.slice(0, 5).map(appointment => `
+      <li>
+        <span class=\"availability-date\">${escapeHtml(appointment.date)}</span>
+        <span class=\"availability-time\">${escapeHtml(appointment.time)}</span>
+      </li>
+    `).join('');
+  } catch (error) {
+    console.error('Could not load Calendly availability:', error);
+    list.innerHTML = '<li><span class=\"availability-date\">See Calendly</span><span class=\"availability-time\">for current times</span></li>';
+  }
+}
+
+function escapeHtml(value) {
+  return String(value ?? '').replace(/[&<>\"']/g, function(char) {
+    const entities = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '\"': '&quot;',
+      "'": '&#39;'
+    };
+    return entities[char];
+  });
+}
+
+loadAvailability();
 </script>
 </body>
 </html>
