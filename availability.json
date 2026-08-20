@@ -1,14 +1,9 @@
 {
-  "updated_at": "2026-08-20T16:25:37.602Z",
+  "updated_at": "2026-08-20T17:22:02.332Z",
   "time_zone": "America/Mexico_City",
   "event_type": "QHHT Session with Marni",
   "scheduling_url": "https://calendly.com/marniqhht/qhht-session-with-marni",
   "appointments": [
-    {
-      "date": "SEP 10",
-      "time": "9:00 AM",
-      "start_time": "2026-09-10T15:00:00Z"
-    },
     {
       "date": "SEP 13",
       "time": "10:00 AM",
